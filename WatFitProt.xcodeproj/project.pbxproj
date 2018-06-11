@@ -1,0 +1,578 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D3B568AF20CF1F4D0016C879 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B568AE20CF1F4D0016C879 /* AppDelegate.swift */; };
+		D3B568B120CF1F4D0016C879 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B568B020CF1F4D0016C879 /* ViewController.swift */; };
+		D3B568B420CF1F4D0016C879 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3B568B220CF1F4D0016C879 /* Main.storyboard */; };
+		D3B568B720CF1F4D0016C879 /* WatFitProt.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D3B568B520CF1F4D0016C879 /* WatFitProt.xcdatamodeld */; };
+		D3B568B920CF1F4D0016C879 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3B568B820CF1F4D0016C879 /* Assets.xcassets */; };
+		D3B568BC20CF1F4D0016C879 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3B568BA20CF1F4D0016C879 /* LaunchScreen.storyboard */; };
+		D3B568C720CF1F4E0016C879 /* WatFitProtTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B568C620CF1F4E0016C879 /* WatFitProtTests.swift */; };
+		D3B568D220CF1F4E0016C879 /* WatFitProtUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B568D120CF1F4E0016C879 /* WatFitProtUITests.swift */; };
+		D3B568E020CF31BF0016C879 /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B568DF20CF31BF0016C879 /* CustomCollectionViewCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D3B568C320CF1F4E0016C879 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D3B568A320CF1F4D0016C879 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D3B568AA20CF1F4D0016C879;
+			remoteInfo = WatFitProt;
+		};
+		D3B568CE20CF1F4E0016C879 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D3B568A320CF1F4D0016C879 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D3B568AA20CF1F4D0016C879;
+			remoteInfo = WatFitProt;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D3B568AB20CF1F4D0016C879 /* WatFitProt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatFitProt.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3B568AE20CF1F4D0016C879 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D3B568B020CF1F4D0016C879 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D3B568B320CF1F4D0016C879 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D3B568B620CF1F4D0016C879 /* WatFitProt.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WatFitProt.xcdatamodel; sourceTree = "<group>"; };
+		D3B568B820CF1F4D0016C879 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D3B568BB20CF1F4D0016C879 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D3B568BD20CF1F4D0016C879 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3B568C220CF1F4E0016C879 /* WatFitProtTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WatFitProtTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3B568C620CF1F4E0016C879 /* WatFitProtTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatFitProtTests.swift; sourceTree = "<group>"; };
+		D3B568C820CF1F4E0016C879 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3B568CD20CF1F4E0016C879 /* WatFitProtUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WatFitProtUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3B568D120CF1F4E0016C879 /* WatFitProtUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatFitProtUITests.swift; sourceTree = "<group>"; };
+		D3B568D320CF1F4E0016C879 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3B568DF20CF31BF0016C879 /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D3B568A820CF1F4D0016C879 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3B568BF20CF1F4E0016C879 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3B568CA20CF1F4E0016C879 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D3B568A220CF1F4D0016C879 = {
+			isa = PBXGroup;
+			children = (
+				D3B568AD20CF1F4D0016C879 /* WatFitProt */,
+				D3B568C520CF1F4E0016C879 /* WatFitProtTests */,
+				D3B568D020CF1F4E0016C879 /* WatFitProtUITests */,
+				D3B568AC20CF1F4D0016C879 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D3B568AC20CF1F4D0016C879 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D3B568AB20CF1F4D0016C879 /* WatFitProt.app */,
+				D3B568C220CF1F4E0016C879 /* WatFitProtTests.xctest */,
+				D3B568CD20CF1F4E0016C879 /* WatFitProtUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D3B568AD20CF1F4D0016C879 /* WatFitProt */ = {
+			isa = PBXGroup;
+			children = (
+				D3B568AE20CF1F4D0016C879 /* AppDelegate.swift */,
+				D3B568B020CF1F4D0016C879 /* ViewController.swift */,
+				D3B568B220CF1F4D0016C879 /* Main.storyboard */,
+				D3B568DF20CF31BF0016C879 /* CustomCollectionViewCell.swift */,
+				D3B568B820CF1F4D0016C879 /* Assets.xcassets */,
+				D3B568BA20CF1F4D0016C879 /* LaunchScreen.storyboard */,
+				D3B568BD20CF1F4D0016C879 /* Info.plist */,
+				D3B568B520CF1F4D0016C879 /* WatFitProt.xcdatamodeld */,
+			);
+			path = WatFitProt;
+			sourceTree = "<group>";
+		};
+		D3B568C520CF1F4E0016C879 /* WatFitProtTests */ = {
+			isa = PBXGroup;
+			children = (
+				D3B568C620CF1F4E0016C879 /* WatFitProtTests.swift */,
+				D3B568C820CF1F4E0016C879 /* Info.plist */,
+			);
+			path = WatFitProtTests;
+			sourceTree = "<group>";
+		};
+		D3B568D020CF1F4E0016C879 /* WatFitProtUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D3B568D120CF1F4E0016C879 /* WatFitProtUITests.swift */,
+				D3B568D320CF1F4E0016C879 /* Info.plist */,
+			);
+			path = WatFitProtUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D3B568AA20CF1F4D0016C879 /* WatFitProt */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D3B568D620CF1F4E0016C879 /* Build configuration list for PBXNativeTarget "WatFitProt" */;
+			buildPhases = (
+				D3B568A720CF1F4D0016C879 /* Sources */,
+				D3B568A820CF1F4D0016C879 /* Frameworks */,
+				D3B568A920CF1F4D0016C879 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WatFitProt;
+			productName = WatFitProt;
+			productReference = D3B568AB20CF1F4D0016C879 /* WatFitProt.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D3B568C120CF1F4E0016C879 /* WatFitProtTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D3B568D920CF1F4E0016C879 /* Build configuration list for PBXNativeTarget "WatFitProtTests" */;
+			buildPhases = (
+				D3B568BE20CF1F4E0016C879 /* Sources */,
+				D3B568BF20CF1F4E0016C879 /* Frameworks */,
+				D3B568C020CF1F4E0016C879 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D3B568C420CF1F4E0016C879 /* PBXTargetDependency */,
+			);
+			name = WatFitProtTests;
+			productName = WatFitProtTests;
+			productReference = D3B568C220CF1F4E0016C879 /* WatFitProtTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D3B568CC20CF1F4E0016C879 /* WatFitProtUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D3B568DC20CF1F4E0016C879 /* Build configuration list for PBXNativeTarget "WatFitProtUITests" */;
+			buildPhases = (
+				D3B568C920CF1F4E0016C879 /* Sources */,
+				D3B568CA20CF1F4E0016C879 /* Frameworks */,
+				D3B568CB20CF1F4E0016C879 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D3B568CF20CF1F4E0016C879 /* PBXTargetDependency */,
+			);
+			name = WatFitProtUITests;
+			productName = WatFitProtUITests;
+			productReference = D3B568CD20CF1F4E0016C879 /* WatFitProtUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D3B568A320CF1F4D0016C879 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = GTN;
+				TargetAttributes = {
+					D3B568AA20CF1F4D0016C879 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					D3B568C120CF1F4E0016C879 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = D3B568AA20CF1F4D0016C879;
+					};
+					D3B568CC20CF1F4E0016C879 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = D3B568AA20CF1F4D0016C879;
+					};
+				};
+			};
+			buildConfigurationList = D3B568A620CF1F4D0016C879 /* Build configuration list for PBXProject "WatFitProt" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D3B568A220CF1F4D0016C879;
+			productRefGroup = D3B568AC20CF1F4D0016C879 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D3B568AA20CF1F4D0016C879 /* WatFitProt */,
+				D3B568C120CF1F4E0016C879 /* WatFitProtTests */,
+				D3B568CC20CF1F4E0016C879 /* WatFitProtUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D3B568A920CF1F4D0016C879 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3B568BC20CF1F4D0016C879 /* LaunchScreen.storyboard in Resources */,
+				D3B568B920CF1F4D0016C879 /* Assets.xcassets in Resources */,
+				D3B568B420CF1F4D0016C879 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3B568C020CF1F4E0016C879 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3B568CB20CF1F4E0016C879 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D3B568A720CF1F4D0016C879 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3B568B720CF1F4D0016C879 /* WatFitProt.xcdatamodeld in Sources */,
+				D3B568B120CF1F4D0016C879 /* ViewController.swift in Sources */,
+				D3B568AF20CF1F4D0016C879 /* AppDelegate.swift in Sources */,
+				D3B568E020CF31BF0016C879 /* CustomCollectionViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3B568BE20CF1F4E0016C879 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3B568C720CF1F4E0016C879 /* WatFitProtTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3B568C920CF1F4E0016C879 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3B568D220CF1F4E0016C879 /* WatFitProtUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D3B568C420CF1F4E0016C879 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D3B568AA20CF1F4D0016C879 /* WatFitProt */;
+			targetProxy = D3B568C320CF1F4E0016C879 /* PBXContainerItemProxy */;
+		};
+		D3B568CF20CF1F4E0016C879 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D3B568AA20CF1F4D0016C879 /* WatFitProt */;
+			targetProxy = D3B568CE20CF1F4E0016C879 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D3B568B220CF1F4D0016C879 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D3B568B320CF1F4D0016C879 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D3B568BA20CF1F4D0016C879 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D3B568BB20CF1F4D0016C879 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D3B568D420CF1F4E0016C879 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D3B568D520CF1F4E0016C879 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D3B568D720CF1F4E0016C879 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = WatFitProt/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.uwaterloo.WatFitProt;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D3B568D820CF1F4E0016C879 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = WatFitProt/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.uwaterloo.WatFitProt;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D3B568DA20CF1F4E0016C879 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = WatFitProtTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.uwaterloo.WatFitProtTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WatFitProt.app/WatFitProt";
+			};
+			name = Debug;
+		};
+		D3B568DB20CF1F4E0016C879 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = WatFitProtTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.uwaterloo.WatFitProtTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WatFitProt.app/WatFitProt";
+			};
+			name = Release;
+		};
+		D3B568DD20CF1F4E0016C879 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = WatFitProtUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.uwaterloo.WatFitProtUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WatFitProt;
+			};
+			name = Debug;
+		};
+		D3B568DE20CF1F4E0016C879 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = WatFitProtUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.uwaterloo.WatFitProtUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WatFitProt;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D3B568A620CF1F4D0016C879 /* Build configuration list for PBXProject "WatFitProt" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D3B568D420CF1F4E0016C879 /* Debug */,
+				D3B568D520CF1F4E0016C879 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D3B568D620CF1F4E0016C879 /* Build configuration list for PBXNativeTarget "WatFitProt" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D3B568D720CF1F4E0016C879 /* Debug */,
+				D3B568D820CF1F4E0016C879 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D3B568D920CF1F4E0016C879 /* Build configuration list for PBXNativeTarget "WatFitProtTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D3B568DA20CF1F4E0016C879 /* Debug */,
+				D3B568DB20CF1F4E0016C879 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D3B568DC20CF1F4E0016C879 /* Build configuration list for PBXNativeTarget "WatFitProtUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D3B568DD20CF1F4E0016C879 /* Debug */,
+				D3B568DE20CF1F4E0016C879 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D3B568B520CF1F4D0016C879 /* WatFitProt.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D3B568B620CF1F4D0016C879 /* WatFitProt.xcdatamodel */,
+			);
+			currentVersion = D3B568B620CF1F4D0016C879 /* WatFitProt.xcdatamodel */;
+			path = WatFitProt.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = D3B568A320CF1F4D0016C879 /* Project object */;
+}
