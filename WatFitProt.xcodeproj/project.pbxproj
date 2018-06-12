@@ -16,6 +16,8 @@
 		D3B568C720CF1F4E0016C879 /* WatFitProtTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B568C620CF1F4E0016C879 /* WatFitProtTests.swift */; };
 		D3B568D220CF1F4E0016C879 /* WatFitProtUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B568D120CF1F4E0016C879 /* WatFitProtUITests.swift */; };
 		D3B568E020CF31BF0016C879 /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B568DF20CF31BF0016C879 /* CustomCollectionViewCell.swift */; };
+		D3B568E220CF446B0016C879 /* DescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B568E120CF446B0016C879 /* DescriptionViewController.swift */; };
+		D3B568E420CF634D0016C879 /* Excercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B568E320CF634D0016C879 /* Excercise.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		D3B568D120CF1F4E0016C879 /* WatFitProtUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatFitProtUITests.swift; sourceTree = "<group>"; };
 		D3B568D320CF1F4E0016C879 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D3B568DF20CF31BF0016C879 /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
+		D3B568E120CF446B0016C879 /* DescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionViewController.swift; sourceTree = "<group>"; };
+		D3B568E320CF634D0016C879 /* Excercise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Excercise.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,8 +107,10 @@
 			children = (
 				D3B568AE20CF1F4D0016C879 /* AppDelegate.swift */,
 				D3B568B020CF1F4D0016C879 /* ViewController.swift */,
+				D3B568E120CF446B0016C879 /* DescriptionViewController.swift */,
 				D3B568B220CF1F4D0016C879 /* Main.storyboard */,
 				D3B568DF20CF31BF0016C879 /* CustomCollectionViewCell.swift */,
+				D3B568E320CF634D0016C879 /* Excercise.swift */,
 				D3B568B820CF1F4D0016C879 /* Assets.xcassets */,
 				D3B568BA20CF1F4D0016C879 /* LaunchScreen.storyboard */,
 				D3B568BD20CF1F4D0016C879 /* Info.plist */,
@@ -266,8 +272,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3B568B720CF1F4D0016C879 /* WatFitProt.xcdatamodeld in Sources */,
+				D3B568E420CF634D0016C879 /* Excercise.swift in Sources */,
 				D3B568B120CF1F4D0016C879 /* ViewController.swift in Sources */,
 				D3B568AF20CF1F4D0016C879 /* AppDelegate.swift in Sources */,
+				D3B568E220CF446B0016C879 /* DescriptionViewController.swift in Sources */,
 				D3B568E020CF31BF0016C879 /* CustomCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

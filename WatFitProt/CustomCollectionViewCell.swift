@@ -14,6 +14,4 @@ class CustomCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var cellLabel: UILabel!
     
-    @IBOutlet weak var cellButton: UIButton!
-
 }
