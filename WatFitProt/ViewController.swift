@@ -38,15 +38,15 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "showDetails", sender: excercises[indexPath.row] )
+        performSegue(withIdentifier: "showDetails", sender: indexPath.item )
         print("You selected cell #\(indexPath.item)!")
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showDetails" {
             let descripVC = segue.destination as! DescriptionViewController
-            let excerciseName = sender as! String
-            descripVC.name = excerciseName
+            let excerciseNum = sender as! Int
+            descripVC.index = excerciseNum
         }
     }
     
