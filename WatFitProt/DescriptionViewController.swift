@@ -48,6 +48,16 @@ class DescriptionViewController: UIViewController {
     }
     
     @IBAction func beginExcercise(_ sender: Any) {
+        let setValS:Int? = Int(labelSets.text!)
+        var tmpS = setValS as! Int
+        
+        let setValR:Int? = Int(labelReps.text!)
+        var tmpR = setValR as! Int
+        
+        currentExc.sets = tmpS
+        currentExc.reps = tmpR
+        
+        performSegue(withIdentifier: "startExcercise", sender: currentExc)
     }
     
     var index: Int!
