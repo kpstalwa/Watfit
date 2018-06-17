@@ -9,11 +9,34 @@
 import UIKit
 
 class MotionViewController: UIViewController {
+    
+    var currentExc : Excercise?
 
+    @IBOutlet weak var setLimit: UILabel!
+    @IBOutlet weak var repLimit: UILabel!
+    @IBAction func finishProt(_ sender: UIButton) {
+        performSegue(withIdentifier: "finishExcercise", sender: currentExc )
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "finishExcercise" {
+            let scoreVC = segue.destination as! ScoreViewController
+            scoreVC.currentExc = currentExc
+        }
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.title = "Perform Excercise"
+        setLimit!.text! = String(describing: currentExc!.sets!)
+        repLimit!.text! = String(describing: currentExc!.reps!)
     }
 
     override func didReceiveMemoryWarning() {

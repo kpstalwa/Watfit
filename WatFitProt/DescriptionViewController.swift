@@ -14,11 +14,12 @@ class DescriptionViewController: UIViewController {
     @IBOutlet weak var excerciseTxt: UITextView!
     @IBOutlet weak var labelSets: UILabel!
     @IBOutlet weak var labelReps: UILabel!
-    
+    var index: Int!
+    var currentExc = Excercise()
     @IBAction func minusSets(_ sender: UIButton) {
         let setVal:Int? = Int(labelSets.text!)
         var tmp = setVal as! Int
-        if (tmp > 0){
+        if (tmp > 1){
         tmp = tmp - 1
         labelSets.text = String(describing: tmp)
         }
@@ -34,7 +35,7 @@ class DescriptionViewController: UIViewController {
     @IBAction func minusReps(_ sender: Any) {
         let setVal:Int? = Int(labelReps.text!)
         var tmp = setVal as! Int
-        if (tmp > 0){
+        if (tmp > 1){
             tmp = tmp - 1
             labelReps.text = String(describing: tmp)
         }
@@ -60,12 +61,17 @@ class DescriptionViewController: UIViewController {
         performSegue(withIdentifier: "startExcercise", sender: currentExc)
     }
     
-    var index: Int!
-    var currentExc = Excercise()
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+         if segue.identifier == "startExcercise"{
+            let motionVC = segue.destination as! MotionViewController
+            motionVC.currentExc = currentExc
+        }
+    }
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.navigationController!.isNavigationBarHidden = false
         // Do any additional setup after loading the view.
     }
     
@@ -82,8 +88,8 @@ class DescriptionViewController: UIViewController {
         self.title = currentExc.name
         excerciseImg.image = UIImage(named: currentExc.name!)
         excerciseTxt.text = currentExc.descEx[index]
-        labelSets.text = "0"
-        labelReps.text = "0"
+        labelSets.text = "1"
+        labelReps.text = "1"
     }
     
     override func didReceiveMemoryWarning() {

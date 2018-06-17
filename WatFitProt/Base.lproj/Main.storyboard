@@ -107,7 +107,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bench Press" translatesAutoresizingMaskIntoConstraints="NO" id="b0J-J3-d6r">
-                                <rect key="frame" x="26" y="88" width="317" height="178"/>
+                                <rect key="frame" x="26" y="44" width="317" height="222"/>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LGt-oy-emf">
                                 <rect key="frame" x="26" y="289" width="317" height="226"/>
@@ -117,7 +117,7 @@
                                 </constraints>
                                 <attributedString key="attributedText">
                                     <fragment>
-                                        <mutableString key="content">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                        <string key="content">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <attributes>
                                             <font key="NSFont" metaFont="system" size="14"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
@@ -273,14 +273,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="progress" translatesAutoresizingMaskIntoConstraints="NO" id="8Pv-rN-yBD">
-                                <rect key="frame" x="52" y="209" width="278" height="248"/>
+                                <rect key="frame" x="52" y="165" width="278" height="248"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="278" id="6N7-3a-2l8"/>
                                     <constraint firstAttribute="height" constant="248" id="m5o-7Y-dZw"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Excercise In Progress" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vXO-zp-zi2">
-                                <rect key="frame" x="24" y="82" width="335" height="81"/>
+                                <rect key="frame" x="24" y="38" width="335" height="81"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="81" id="m1l-OU-yzK"/>
                                 </constraints>
@@ -289,7 +289,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rep:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WdU-V1-WVf">
-                                <rect key="frame" x="298" y="516" width="61" height="41"/>
+                                <rect key="frame" x="298" y="472" width="61" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="61" id="7Dz-mp-NJH"/>
                                     <constraint firstAttribute="height" constant="41" id="cGK-oz-Sms"/>
@@ -316,7 +316,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WJE-4S-A4D">
-                                <rect key="frame" x="24" y="516" width="61" height="41"/>
+                                <rect key="frame" x="24" y="472" width="61" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="61" id="JYq-Ve-oP6"/>
                                     <constraint firstAttribute="height" constant="41" id="cVK-h8-yKr"/>
@@ -375,18 +375,35 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ut2-Gl-IRh">
+                                <rect key="frame" x="134" y="594" width="124" height="53"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="124" id="ocn-g0-H9U"/>
+                                    <constraint firstAttribute="height" constant="53" id="opT-ZW-g4Q"/>
+                                </constraints>
+                                <state key="normal" image="finish">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="finishProt:" destination="QTa-pp-Wcq" eventType="touchUpInside" id="Bfo-9u-MKf"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="1yY-ik-9QI" firstAttribute="bottom" secondItem="qtG-cB-0Q5" secondAttribute="bottom" constant="65" id="2tT-gY-PEY"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="TYD-Qm-OtS" secondAttribute="trailing" constant="20" symbolic="YES" id="4lB-Tj-6xe"/>
+                            <constraint firstItem="SvY-WR-Nfk" firstAttribute="leading" secondItem="Ut2-Gl-IRh" secondAttribute="trailing" constant="34" id="992-E8-eDn"/>
                             <constraint firstItem="vXO-zp-zi2" firstAttribute="leading" secondItem="1yY-ik-9QI" secondAttribute="leading" constant="24" id="9Uf-DT-MdK"/>
                             <constraint firstItem="1yY-ik-9QI" firstAttribute="trailing" secondItem="8Pv-rN-yBD" secondAttribute="trailing" constant="45" id="A59-7L-NCw"/>
                             <constraint firstItem="TYD-Qm-OtS" firstAttribute="leading" secondItem="1yY-ik-9QI" secondAttribute="leading" constant="33" id="DJj-KH-ZdO"/>
+                            <constraint firstItem="1yY-ik-9QI" firstAttribute="bottom" secondItem="Ut2-Gl-IRh" secondAttribute="bottom" constant="20" id="Dck-jc-z6c"/>
                             <constraint firstItem="1yY-ik-9QI" firstAttribute="bottom" secondItem="sFH-B4-MDo" secondAttribute="bottom" constant="58" id="IYu-uE-DVr"/>
                             <constraint firstItem="1yY-ik-9QI" firstAttribute="bottom" secondItem="SvY-WR-Nfk" secondAttribute="bottom" constant="55" id="JUU-Qk-VHR"/>
                             <constraint firstItem="1yY-ik-9QI" firstAttribute="bottom" secondItem="gY7-RD-OnS" secondAttribute="bottom" constant="63" id="K4H-r2-GSD"/>
                             <constraint firstItem="vXO-zp-zi2" firstAttribute="top" secondItem="1yY-ik-9QI" secondAttribute="top" constant="18" id="Lhj-SN-qBp"/>
+                            <constraint firstItem="Ut2-Gl-IRh" firstAttribute="leading" secondItem="TJg-Sm-8Ub" secondAttribute="trailing" constant="18" id="Lz8-tB-JGX"/>
                             <constraint firstItem="TJg-Sm-8Ub" firstAttribute="leading" secondItem="gY7-RD-OnS" secondAttribute="trailing" constant="8" id="Own-ze-i8x"/>
                             <constraint firstItem="1yY-ik-9QI" firstAttribute="trailing" secondItem="SvY-WR-Nfk" secondAttribute="trailing" constant="41" id="P0z-Qi-7nG"/>
                             <constraint firstItem="8Pv-rN-yBD" firstAttribute="top" secondItem="vXO-zp-zi2" secondAttribute="bottom" constant="46" id="Qmm-kU-90t"/>
@@ -406,10 +423,66 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1yY-ik-9QI"/>
                     </view>
+                    <connections>
+                        <outlet property="repLimit" destination="qtG-cB-0Q5" id="c8E-XV-Oe4"/>
+                        <outlet property="setLimit" destination="TJg-Sm-8Ub" id="3ab-ve-cCH"/>
+                        <segue destination="8zf-tA-Mhn" kind="show" identifier="finishExcercise" id="0ud-Me-eSi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="deh-Iy-2ie" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1436" y="137.18140929535232"/>
+        </scene>
+        <!--Score View Controller-->
+        <scene sceneID="Rod-xp-FmH">
+            <objects>
+                <viewController id="8zf-tA-Mhn" customClass="ScoreViewController" customModule="WatFitProt" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pNz-so-BLK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="circleGreen" translatesAutoresizingMaskIntoConstraints="NO" id="Kur-o1-PTO">
+                                <rect key="frame" x="27" y="136" width="317" height="322"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kL2-EU-O7Z">
+                                <rect key="frame" x="129" y="107" width="135" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="sbf-ka-ZhC">
+                                <rect key="frame" x="76" y="233" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">This is where your score is displayed based on how well you performed the excercise.                                             currently in progress.    </string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DkD-6W-Ffc">
+                                <rect key="frame" x="114" y="570" width="142" height="77"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="77" id="VYD-Fe-M9w"/>
+                                    <constraint firstAttribute="width" constant="142" id="nRo-wI-FMI"/>
+                                </constraints>
+                                <state key="normal" image="startOver"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="startOver" id="2ai-WE-1TK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="DkD-6W-Ffc" firstAttribute="leading" secondItem="1Ew-1M-ltg" secondAttribute="leading" constant="114" id="d5k-f6-cko"/>
+                            <constraint firstItem="1Ew-1M-ltg" firstAttribute="bottom" secondItem="DkD-6W-Ffc" secondAttribute="bottom" constant="20" id="zbX-fU-jUP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="1Ew-1M-ltg"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Agn-U0-SRF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2108" y="156.97151424287858"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cCg-7H-m9w">
@@ -432,9 +505,15 @@
     </scenes>
     <resources>
         <image name="Bench Press" width="400" height="400"/>
+        <image name="circleGreen" width="464" height="420"/>
+        <image name="finish" width="242" height="88"/>
         <image name="minus" width="140" height="146"/>
         <image name="plus" width="152" height="154"/>
         <image name="progress" width="308" height="356"/>
         <image name="startButton" width="678" height="134"/>
+        <image name="startOver" width="322" height="126"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="2ai-WE-1TK"/>
+    </inferredMetricsTieBreakers>
 </document>

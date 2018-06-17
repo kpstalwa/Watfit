@@ -21,13 +21,22 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash" translatesAutoresizingMaskIntoConstraints="NO" id="eyh-oO-yKo">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dumbell" translatesAutoresizingMaskIntoConstraints="NO" id="9gK-SF-Bsi">
+                                <rect key="frame" x="35" y="316" width="305" height="226"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="226" id="tma-C1-PoY"/>
+                                    <constraint firstAttribute="width" constant="305" id="uSu-NT-1zG"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="eyh-oO-yKo" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="3wE-te-NKz"/>
                             <constraint firstItem="eyh-oO-yKo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="DL0-NG-MSB"/>
                             <constraint firstItem="eyh-oO-yKo" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="EUx-5Y-h8g"/>
+                            <constraint firstItem="9gK-SF-Bsi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="35" id="WXv-k0-7mi"/>
                             <constraint firstItem="eyh-oO-yKo" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ioR-Jx-YGN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="9gK-SF-Bsi" secondAttribute="bottom" constant="125" id="q1P-35-UDG"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -38,6 +47,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="dumbell" width="570" height="242"/>
         <image name="splash" width="556" height="1014"/>
     </resources>
 </document>
