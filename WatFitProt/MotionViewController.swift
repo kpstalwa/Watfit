@@ -10,7 +10,7 @@ import UIKit
 
 class MotionViewController: UIViewController {
     
-    var currentExc : Excercise?
+    var currentExc : Exercise?
 
     @IBOutlet weak var setLimit: UILabel!
     @IBOutlet weak var repLimit: UILabel!

@@ -253,8 +253,8 @@
                         <viewLayoutGuide key="safeArea" id="akj-EZ-bC2"/>
                     </view>
                     <connections>
-                        <outlet property="excerciseImg" destination="b0J-J3-d6r" id="fIN-az-tqH"/>
-                        <outlet property="excerciseTxt" destination="LGt-oy-emf" id="WW5-HU-57X"/>
+                        <outlet property="ExerciseImg" destination="b0J-J3-d6r" id="zKf-6F-r5v"/>
+                        <outlet property="ExerciseTxt" destination="LGt-oy-emf" id="wsT-cM-Ev9"/>
                         <outlet property="labelReps" destination="tfQ-xH-vZZ" id="ZR3-sy-tOY"/>
                         <outlet property="labelSets" destination="TMl-nV-88r" id="C7p-E1-69H"/>
                         <segue destination="QTa-pp-Wcq" kind="show" identifier="startExcercise" id="th0-SC-y3D"/>
@@ -514,6 +514,7 @@
         <image name="startOver" width="322" height="126"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="th0-SC-y3D"/>
         <segue reference="2ai-WE-1TK"/>
     </inferredMetricsTieBreakers>
 </document>

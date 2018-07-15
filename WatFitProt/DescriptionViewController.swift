@@ -10,12 +10,17 @@ import UIKit
 
 class DescriptionViewController: UIViewController {
     
-    @IBOutlet weak var excerciseImg: UIImageView!
-    @IBOutlet weak var excerciseTxt: UITextView!
+   // @IBOutlet weak var ExerciseImg: UIImageView!
+    
+    @IBOutlet weak var ExerciseImg: UIImageView!
+    
+    @IBOutlet weak var ExerciseTxt: UITextView!
+    //  @IBOutlet weak var ExerciseTxt: UITextView!
+    
     @IBOutlet weak var labelSets: UILabel!
     @IBOutlet weak var labelReps: UILabel!
     var index: Int!
-    var currentExc = Excercise()
+    var currentExc: Exercise!
     @IBAction func minusSets(_ sender: UIButton) {
         let setVal:Int? = Int(labelSets.text!)
         var tmp = setVal as! Int
@@ -48,21 +53,23 @@ class DescriptionViewController: UIViewController {
         labelReps.text = String(describing: tmp)
     }
     
-    @IBAction func beginExcercise(_ sender: Any) {
+    
+    
+    @IBAction func beginExercise(_ sender: Any) {
         let setValS:Int? = Int(labelSets.text!)
         var tmpS = setValS as! Int
         
         let setValR:Int? = Int(labelReps.text!)
         var tmpR = setValR as! Int
         
-        currentExc.sets = tmpS
-        currentExc.reps = tmpR
+        currentExc.setSets(n:tmpS)
+        currentExc.setReps(n:tmpR)
         
-        performSegue(withIdentifier: "startExcercise", sender: currentExc)
+        performSegue(withIdentifier: "startExercise", sender: currentExc)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-         if segue.identifier == "startExcercise"{
+         if segue.identifier == "startExercise"{
             let motionVC = segue.destination as! MotionViewController
             motionVC.currentExc = currentExc
         }
@@ -75,9 +82,32 @@ class DescriptionViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    func setProperties(){
+        currentExc.setName(s:currentExc.listEx[index])
+        currentExc.setDesc(s:currentExc.getDescription())
+    }
+    //create a new class based on index number
+    //["Bench Press","OverHead Press", "Squat", "Barbell Rows", "Lat Pulldowns", "Peck Deck"]
     func setClass(numOfEx: Int)  {
-        currentExc.name = currentExc.listEx[index]
-        currentExc.desc = currentExc.descEx[index]
+        switch index {
+        case 0:
+            currentExc = Bench()
+        case 1:
+            currentExc = OverHead()
+        case 2:
+            currentExc = Squat()
+        case 3:
+            currentExc = Rows()
+        case 4:
+            currentExc = PullDowns()
+        case 5:
+            currentExc = Peck()
+        default:
+            currentExc = Exercise()
+        }
+        
+        setProperties()
+        
         //currentExc.desc = currentExc.descEx[]
         
     }
@@ -86,8 +116,8 @@ class DescriptionViewController: UIViewController {
         super.viewWillAppear(animated)
         setClass(numOfEx: index)
         self.title = currentExc.name
-        excerciseImg.image = UIImage(named: currentExc.name!)
-        excerciseTxt.text = currentExc.descEx[index]
+        ExerciseImg.image = UIImage(named: currentExc.name!)
+        ExerciseTxt.text = currentExc.getDescription()
         labelSets.text = "1"
         labelReps.text = "1"
     }

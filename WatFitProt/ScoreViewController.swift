@@ -9,7 +9,7 @@
 import UIKit
 
 class ScoreViewController: UIViewController {
-    var currentExc : Excercise?
+    var currentExc : Exercise?
 
     override func viewDidLoad() {
         super.viewDidLoad()
