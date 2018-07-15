@@ -4,3 +4,4 @@ WatFit is a fitness app that uses motion sensing capabilities of the IPhone to b
 
 # Progress So far:
 - UI work is done, as well as the general structure of the app.
+- Organized classes to reflect template design behaviour
