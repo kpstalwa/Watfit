@@ -15,11 +15,11 @@ class MotionViewController: UIViewController {
     @IBOutlet weak var setLimit: UILabel!
     @IBOutlet weak var repLimit: UILabel!
     @IBAction func finishProt(_ sender: UIButton) {
-        performSegue(withIdentifier: "finishExcercise", sender: currentExc )
+        performSegue(withIdentifier: "finishExercise", sender: currentExc )
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "finishExcercise" {
+        if segue.identifier == "finishExercise" {
             let scoreVC = segue.destination as! ScoreViewController
             scoreVC.currentExc = currentExc
         }
@@ -34,7 +34,7 @@ class MotionViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.title = "Perform Excercise"
+        self.title = "Perform Exercise"
         setLimit!.text! = String(describing: currentExc!.sets!)
         repLimit!.text! = String(describing: currentExc!.reps!)
     }

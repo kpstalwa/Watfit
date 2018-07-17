@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D33637AB20D6EBFE00A0E79B /* ScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33637AA20D6EBFE00A0E79B /* ScoreViewController.swift */; };
+		D38AF68B20FE7A7100C62810 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38AF68A20FE7A7100C62810 /* TimerViewController.swift */; };
 		D3B568AF20CF1F4D0016C879 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B568AE20CF1F4D0016C879 /* AppDelegate.swift */; };
 		D3B568B120CF1F4D0016C879 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B568B020CF1F4D0016C879 /* ViewController.swift */; };
 		D3B568B420CF1F4D0016C879 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3B568B220CF1F4D0016C879 /* Main.storyboard */; };
@@ -42,6 +43,7 @@
 /* Begin PBXFileReference section */
 		D331B91120D75DCC003578B3 /* WatFitProt.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WatFitProt.entitlements; sourceTree = "<group>"; };
 		D33637AA20D6EBFE00A0E79B /* ScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreViewController.swift; sourceTree = "<group>"; };
+		D38AF68A20FE7A7100C62810 /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 		D3B568AB20CF1F4D0016C879 /* WatFitProt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatFitProt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3B568AE20CF1F4D0016C879 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3B568B020CF1F4D0016C879 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 				D3B568B020CF1F4D0016C879 /* ViewController.swift */,
 				D3B568E120CF446B0016C879 /* DescriptionViewController.swift */,
 				D3B568B220CF1F4D0016C879 /* Main.storyboard */,
+				D38AF68A20FE7A7100C62810 /* TimerViewController.swift */,
 				D33637AA20D6EBFE00A0E79B /* ScoreViewController.swift */,
 				D3B568E520D06E920016C879 /* MotionViewController.swift */,
 				D3B568DF20CF31BF0016C879 /* CustomCollectionViewCell.swift */,
@@ -285,6 +288,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3B568B720CF1F4D0016C879 /* WatFitProt.xcdatamodeld in Sources */,
+				D38AF68B20FE7A7100C62810 /* TimerViewController.swift in Sources */,
 				D3B568E620D06E920016C879 /* MotionViewController.swift in Sources */,
 				D3B568E420CF634D0016C879 /* Exercise.swift in Sources */,
 				D3B568B120CF1F4D0016C879 /* ViewController.swift in Sources */,
