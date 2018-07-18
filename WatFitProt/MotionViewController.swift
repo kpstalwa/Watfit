@@ -10,6 +10,8 @@ import UIKit
 import SystemConfiguration
 class MotionViewController: UIViewController {
     var syncGroup: DispatchGroup?
+    var timeTillStart = 3
+    var timer = Timer()
     var currentExc : Exercise?
     let m = gfunction()
     @IBOutlet weak var setLimit: UILabel!
@@ -34,15 +36,18 @@ class MotionViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.title = "Perform Exercise"
-        setLimit!.text! = String(describing: currentExc!.sets!)
-        repLimit!.text! = String(describing: currentExc!.reps!)
-        currentReps.text = "0"
+    @objc func updateTimer() {
+        if(timeTillStart > 0){
+        timeTillStart = timeTillStart-1
+        }
+        else{
+            m.startRecord()
+            timer.invalidate()
+        }
         
-        
-        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         //motion setting
         m.staticUpper = (currentExc?.staticUpper)!
         m.StaticLower = (currentExc?.staticLower)!
@@ -54,8 +59,18 @@ class MotionViewController: UIViewController {
         m.setUpdateInterval(time: 0.02)
         m.currentReps = currentReps
         m.syncGroup = syncGroup
-        m.startRecord()
-
+        
+        //3 second wait until recording
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self,   selector: (#selector(updateTimer)), userInfo: nil, repeats: true)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.title = "Perform Exercise"
+        setLimit!.text! = String(describing: currentExc!.sets!)
+        repLimit!.text! = String(describing: currentExc!.reps!)
+        currentReps.text = "0"
+        
         
     }
 

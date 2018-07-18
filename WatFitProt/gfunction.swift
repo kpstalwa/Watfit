@@ -134,6 +134,7 @@ class gfunction{
         
         if quantity <= 0 {
             motion.stopDeviceMotionUpdates()
+            //
             return
         }
         

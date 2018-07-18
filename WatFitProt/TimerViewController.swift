@@ -85,6 +85,7 @@ class TimerViewController: UIViewController {
         }
         else{
             setExerciseProperties()
+            timer.invalidate()
             //perform segue
         }
     }
