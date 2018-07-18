@@ -11,7 +11,8 @@ import UIKit
 class TimerViewController: UIViewController {
 
     var currentExc : Exercise?
-    var totalTime = "60"
+    var totalTime = 60
+    var timer = Timer()
     
     @IBOutlet weak var setsLabel: UILabel!
     @IBOutlet weak var repsLabel: UILabel!
@@ -53,6 +54,19 @@ class TimerViewController: UIViewController {
         tmp = tmp + 1
         repsLabel.text = String(describing: tmp)
     }
+    //call when timer expires or button pressed
+    func setExerciseProperties(){
+        let setVal:Int? = Int(repsLabel.text!)
+        let repVal:Int? = Int(setsLabel.text!)
+        currentExc?.sets = setVal
+        currentExc?.reps = repVal
+    }
+    
+    @IBAction func continueExercise(_ sender: Any) {
+       setExerciseProperties()
+        //should perform segue
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,16 +78,30 @@ class TimerViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    func updateTimer(){
-        
+    @objc func updateTimer(){
+        if(totalTime>0){
+        totalTime = totalTime-1
+        timeLeft.text = "\(totalTime)"
+        }
+        else{
+            setExerciseProperties()
+            //perform segue
+        }
     }
+    func runTimer(){
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self,   selector: (#selector(updateTimer)), userInfo: nil, repeats: true)
+    }
+    
+    @IBAction func finishExercise(_ sender: Any) {
+        //segue out to the score
+    }
+    
     
     override func viewWillAppear(_ animated: Bool) {
      super.viewWillAppear(animated)
-    setsLabel.text = String(describing: currentExc?.sets)
+        setsLabel.text = String(describing: (currentExc?.sets)!-1)
     repsLabel.text = String(describing: currentExc?.reps)
-        timeLeft.text = totalTime
+    timeLeft.text = "\(totalTime)"
     }
 
     /*

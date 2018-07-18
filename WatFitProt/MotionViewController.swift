@@ -7,13 +7,15 @@
 //
 
 import UIKit
-
+import SystemConfiguration
 class MotionViewController: UIViewController {
-    
+    var syncGroup: DispatchGroup?
     var currentExc : Exercise?
-
+    let m = gfunction()
     @IBOutlet weak var setLimit: UILabel!
     @IBOutlet weak var repLimit: UILabel!
+    @IBOutlet weak var currentReps: UILabel!
+    
     @IBAction func finishProt(_ sender: UIButton) {
         performSegue(withIdentifier: "finishExercise", sender: currentExc )
     }
@@ -37,6 +39,24 @@ class MotionViewController: UIViewController {
         self.title = "Perform Exercise"
         setLimit!.text! = String(describing: currentExc!.sets!)
         repLimit!.text! = String(describing: currentExc!.reps!)
+        currentReps.text = "0"
+        
+        
+        
+        //motion setting
+        m.staticUpper = (currentExc?.staticUpper)!
+        m.StaticLower = (currentExc?.staticLower)!
+        m.goodResetLower = (currentExc?.goodResetLower)!
+        m.goodActionUpper = (currentExc?.goodActionUpper)!
+        m.formConstrainPitch = (currentExc?.formConstrainPitch)!
+        m.exercise = currentExc!
+        m.quantity = (currentExc?.reps)!
+        m.setUpdateInterval(time: 0.02)
+        m.currentReps = currentReps
+        m.syncGroup = syncGroup
+        m.startRecord()
+
+        
     }
 
     override func didReceiveMemoryWarning() {
