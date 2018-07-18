@@ -406,7 +406,7 @@
                         <outlet property="currentReps" destination="sFH-B4-MDo" id="Ecd-Ck-eOk"/>
                         <outlet property="repLimit" destination="qtG-cB-0Q5" id="c8E-XV-Oe4"/>
                         <outlet property="setLimit" destination="TJg-Sm-8Ub" id="3ab-ve-cCH"/>
-                        <segue destination="8zf-tA-Mhn" kind="show" identifier="finishExercise" id="0ud-Me-eSi"/>
+                        <segue destination="ojE-Gg-k1N" kind="show" identifier="RestPage" id="9OW-YE-Z0F"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="deh-Iy-2ie" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -514,7 +514,6 @@
                                 <state key="normal" title="-" image="minus"/>
                                 <connections>
                                     <action selector="minusReps:" destination="ojE-Gg-k1N" eventType="touchUpInside" id="orQ-Cn-RWB"/>
-                                    <action selector="minusSets:" destination="IFk-RC-BaU" eventType="touchUpInside" id="dkN-CI-B16"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wnx-so-DQv">
@@ -526,7 +525,6 @@
                                 <state key="normal" title="+" image="plus"/>
                                 <connections>
                                     <action selector="plusSets:" destination="ojE-Gg-k1N" eventType="touchUpInside" id="9or-ha-hAf"/>
-                                    <action selector="plusSets:" destination="IFk-RC-BaU" eventType="touchUpInside" id="jGb-Yb-Wcc"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sets" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="827-6B-1KO">
@@ -594,7 +592,6 @@
                                 </constraints>
                                 <state key="normal" title="+" image="plus"/>
                                 <connections>
-                                    <action selector="plusReps:" destination="IFk-RC-BaU" eventType="touchUpInside" id="eoj-4S-0Xc"/>
                                     <action selector="plusReps:" destination="ojE-Gg-k1N" eventType="touchUpInside" id="ifw-Eo-qnc"/>
                                 </connections>
                             </button>
@@ -641,13 +638,10 @@
                         <viewLayoutGuide key="safeArea" id="eEb-5r-41N"/>
                     </view>
                     <connections>
-                        <outlet property="addRepsButton" destination="0jZ-EL-NyE" id="Mke-e2-flt"/>
-                        <outlet property="addSetsButton" destination="wnx-so-DQv" id="apR-nZ-fjt"/>
                         <outlet property="finishButton" destination="HGQ-yj-yt7" id="35m-2M-Unq"/>
                         <outlet property="repsLabel" destination="p3u-be-pzh" id="baR-Kc-Dyz"/>
                         <outlet property="returnToExcerciseButton" destination="Xob-bP-00o" id="Txa-9S-V0B"/>
                         <outlet property="setsLabel" destination="EON-MT-pxR" id="9SY-Mo-Vr6"/>
-                        <outlet property="subRepsButton" destination="SxO-WS-W4U" id="tnq-mc-A8t"/>
                         <outlet property="timeLeft" destination="hvx-IU-KwB" id="soy-Ft-07f"/>
                     </connections>
                 </viewController>
@@ -686,7 +680,6 @@
         <image name="startOver" width="322" height="126"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="0ud-Me-eSi"/>
         <segue reference="2ai-WE-1TK"/>
     </inferredMetricsTieBreakers>
 </document>

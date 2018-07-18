@@ -70,6 +70,7 @@ class TimerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        runTimer()
 
         // Do any additional setup after loading the view.
     }
@@ -89,6 +90,7 @@ class TimerViewController: UIViewController {
             //perform segue
         }
     }
+
     func runTimer(){
         timer = Timer.scheduledTimer(timeInterval: 1, target: self,   selector: (#selector(updateTimer)), userInfo: nil, repeats: true)
     }
@@ -101,7 +103,7 @@ class TimerViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
      super.viewWillAppear(animated)
         setsLabel.text = String(describing: (currentExc?.sets)!-1)
-    repsLabel.text = String(describing: currentExc?.reps)
+    repsLabel.text = String(describing: (currentExc?.reps)!)
     timeLeft.text = "\(totalTime)"
     }
 

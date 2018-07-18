@@ -9,7 +9,7 @@
 import UIKit
 import SystemConfiguration
 class MotionViewController: UIViewController {
-    var syncGroup: DispatchGroup?
+    var syncGroup = DispatchGroup()
     var timeTillStart = 3
     var timer = Timer()
     var currentExc : Exercise?
@@ -17,14 +17,14 @@ class MotionViewController: UIViewController {
     @IBOutlet weak var setLimit: UILabel!
     @IBOutlet weak var repLimit: UILabel!
     @IBOutlet weak var currentReps: UILabel!
-    
+    //incase finish button is called
     @IBAction func finishProt(_ sender: UIButton) {
-        performSegue(withIdentifier: "finishExercise", sender: currentExc )
+        performSegue(withIdentifier: "RestPage", sender: currentExc)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "finishExercise" {
-            let scoreVC = segue.destination as! ScoreViewController
+        if segue.identifier == "RestPage" {
+            let scoreVC = segue.destination as! TimerViewController
             scoreVC.currentExc = currentExc
         }
     }
@@ -43,6 +43,9 @@ class MotionViewController: UIViewController {
         else{
             m.startRecord()
             timer.invalidate()
+            syncGroup.notify(queue: .main){
+                self.performSegue(withIdentifier: "RestPage", sender: self.currentExc)
+            }
         }
         
     }
@@ -62,6 +65,9 @@ class MotionViewController: UIViewController {
         
         //3 second wait until recording
         timer = Timer.scheduledTimer(timeInterval: 1, target: self,   selector: (#selector(updateTimer)), userInfo: nil, repeats: true)
+    
+
+    
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -70,8 +76,6 @@ class MotionViewController: UIViewController {
         setLimit!.text! = String(describing: currentExc!.sets!)
         repLimit!.text! = String(describing: currentExc!.reps!)
         currentReps.text = "0"
-        
-        
     }
 
     override func didReceiveMemoryWarning() {

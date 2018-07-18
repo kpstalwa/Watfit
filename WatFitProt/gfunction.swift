@@ -53,7 +53,7 @@ class gfunction{
     }
     
     func startRecord(){
-        
+        syncGroup?.enter()
         print("exercise in gfunction: ", exercise.name ?? "Y")
         motion.startDeviceMotionUpdates(to: OperationQueue.current!, withHandler: {
             (deviceMotion, error) -> Void in
@@ -134,6 +134,7 @@ class gfunction{
         
         if quantity <= 0 {
             motion.stopDeviceMotionUpdates()
+            syncGroup?.leave()
             //
             return
         }
