@@ -14,6 +14,10 @@ class MotionViewController: UIViewController {
     var timer = Timer()
     var currentExc : Exercise?
     let m = gfunction()
+    
+   
+    @IBOutlet weak var progressImg: UIImageView!
+    
     @IBOutlet weak var setLimit: UILabel!
     @IBOutlet weak var repLimit: UILabel!
     @IBOutlet weak var currentReps: UILabel!
@@ -24,7 +28,11 @@ class MotionViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "RestPage" {
-            let scoreVC = segue.destination as! TimerViewController
+            let timerVC = segue.destination as! TimerViewController
+            timerVC.currentExc = currentExc
+        }
+        else if segue.identifier == "finishExercise" {
+            let scoreVC = segue.destination as! ScoreViewController
             scoreVC.currentExc = currentExc
         }
     }
@@ -36,6 +44,13 @@ class MotionViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func finishExercise(_ sender: Any) {
+        m.motion.stopDeviceMotionUpdates()
+        
+        performSegue(withIdentifier: "finishExercise", sender: currentExc)
+    }
+    
+    
     @objc func updateTimer() {
         if(timeTillStart > 0){
         timeTillStart = timeTillStart-1
@@ -44,10 +59,14 @@ class MotionViewController: UIViewController {
             m.startRecord()
             timer.invalidate()
             syncGroup.notify(queue: .main){
+                if(self.setLimit.text == "1"){
+                    self.performSegue(withIdentifier: "finishExercise", sender: self.currentExc)
+                }
+                else{
                 self.performSegue(withIdentifier: "RestPage", sender: self.currentExc)
             }
         }
-        
+    }
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -62,6 +81,7 @@ class MotionViewController: UIViewController {
         m.setUpdateInterval(time: 0.02)
         m.currentReps = currentReps
         m.syncGroup = syncGroup
+        m.progressImg = progressImg
         
         //3 second wait until recording
         timer = Timer.scheduledTimer(timeInterval: 1, target: self,   selector: (#selector(updateTimer)), userInfo: nil, repeats: true)
@@ -76,6 +96,7 @@ class MotionViewController: UIViewController {
         setLimit!.text! = String(describing: currentExc!.sets!)
         repLimit!.text! = String(describing: currentExc!.reps!)
         currentReps.text = "0"
+        progressImg.loadGif(name: "source")
     }
 
     override func didReceiveMemoryWarning() {

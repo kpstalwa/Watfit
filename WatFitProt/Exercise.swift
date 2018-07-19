@@ -50,7 +50,12 @@ class Exercise {
         goodRepsOverall = goodRepsOverall! + 1
     }
     func getScoreStatement()->String{
+        if(completedRepsOverall != 0){
         return "You completed a total of \(completedRepsOverall!) reps, out of which you performed \(goodRepsOverall!) perfectly. Your Final score is \((goodRepsOverall!/completedRepsOverall!) * 100), out of 100"
+    }
+        else{
+            return "You did not finish the exercise"
+        }
     }
     
     func getDescription()-> String {

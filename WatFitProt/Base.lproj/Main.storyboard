@@ -277,13 +277,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="progress" translatesAutoresizingMaskIntoConstraints="NO" id="8Pv-rN-yBD">
-                                <rect key="frame" x="52" y="165" width="278" height="248"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="278" id="6N7-3a-2l8"/>
-                                    <constraint firstAttribute="height" constant="248" id="m5o-7Y-dZw"/>
-                                </constraints>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Excercise In Progress" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vXO-zp-zi2">
                                 <rect key="frame" x="24" y="38" width="335" height="81"/>
                                 <constraints>
@@ -320,7 +313,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WJE-4S-A4D">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Set:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WJE-4S-A4D">
                                 <rect key="frame" x="24" y="472" width="61" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="61" id="JYq-Ve-oP6"/>
@@ -374,39 +367,47 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dik-PH-BiI">
+                                <rect key="frame" x="0.0" y="127" width="375" height="337"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="337" id="iMw-Rq-g5Y"/>
+                                    <constraint firstAttribute="width" constant="375" id="plm-hF-iIP"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="1yY-ik-9QI" firstAttribute="bottom" secondItem="qtG-cB-0Q5" secondAttribute="bottom" constant="65" id="2tT-gY-PEY"/>
+                            <constraint firstItem="WdU-V1-WVf" firstAttribute="top" secondItem="dik-PH-BiI" secondAttribute="bottom" constant="8" id="4WR-5E-H5F"/>
+                            <constraint firstItem="dik-PH-BiI" firstAttribute="trailing" secondItem="1yY-ik-9QI" secondAttribute="trailing" id="8hu-Fg-NNo"/>
                             <constraint firstItem="SvY-WR-Nfk" firstAttribute="leading" secondItem="Ut2-Gl-IRh" secondAttribute="trailing" constant="34" id="992-E8-eDn"/>
                             <constraint firstItem="vXO-zp-zi2" firstAttribute="leading" secondItem="1yY-ik-9QI" secondAttribute="leading" constant="24" id="9Uf-DT-MdK"/>
-                            <constraint firstItem="1yY-ik-9QI" firstAttribute="trailing" secondItem="8Pv-rN-yBD" secondAttribute="trailing" constant="45" id="A59-7L-NCw"/>
                             <constraint firstItem="1yY-ik-9QI" firstAttribute="bottom" secondItem="Ut2-Gl-IRh" secondAttribute="bottom" constant="20" id="Dck-jc-z6c"/>
                             <constraint firstItem="1yY-ik-9QI" firstAttribute="bottom" secondItem="sFH-B4-MDo" secondAttribute="bottom" constant="58" id="IYu-uE-DVr"/>
                             <constraint firstItem="1yY-ik-9QI" firstAttribute="bottom" secondItem="SvY-WR-Nfk" secondAttribute="bottom" constant="55" id="JUU-Qk-VHR"/>
                             <constraint firstItem="vXO-zp-zi2" firstAttribute="top" secondItem="1yY-ik-9QI" secondAttribute="top" constant="18" id="Lhj-SN-qBp"/>
                             <constraint firstItem="Ut2-Gl-IRh" firstAttribute="leading" secondItem="TJg-Sm-8Ub" secondAttribute="trailing" constant="18" id="Lz8-tB-JGX"/>
                             <constraint firstItem="1yY-ik-9QI" firstAttribute="trailing" secondItem="SvY-WR-Nfk" secondAttribute="trailing" constant="41" id="P0z-Qi-7nG"/>
-                            <constraint firstItem="8Pv-rN-yBD" firstAttribute="top" secondItem="vXO-zp-zi2" secondAttribute="bottom" constant="46" id="Qmm-kU-90t"/>
                             <constraint firstItem="qtG-cB-0Q5" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="sFH-B4-MDo" secondAttribute="trailing" constant="8" symbolic="YES" id="QyL-Z9-hPa"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="TJg-Sm-8Ub" secondAttribute="trailing" constant="20" symbolic="YES" id="R65-0n-sUC"/>
-                            <constraint firstItem="WJE-4S-A4D" firstAttribute="top" secondItem="8Pv-rN-yBD" secondAttribute="bottom" constant="59" id="RXj-Ux-2Kd"/>
                             <constraint firstItem="sFH-B4-MDo" firstAttribute="leading" secondItem="j8A-eS-a4u" secondAttribute="leading" constant="255" id="RsZ-3L-5Jc"/>
                             <constraint firstItem="WJE-4S-A4D" firstAttribute="leading" secondItem="1yY-ik-9QI" secondAttribute="leading" constant="24" id="WXA-mt-5j7"/>
-                            <constraint firstItem="WdU-V1-WVf" firstAttribute="top" secondItem="8Pv-rN-yBD" secondAttribute="bottom" constant="59" id="Zub-D8-Sjq"/>
                             <constraint firstItem="1yY-ik-9QI" firstAttribute="trailing" secondItem="vXO-zp-zi2" secondAttribute="trailing" constant="16" id="ihp-hX-Aj2"/>
                             <constraint firstItem="1yY-ik-9QI" firstAttribute="trailing" secondItem="qtG-cB-0Q5" secondAttribute="trailing" constant="3" id="inv-rl-NAn"/>
                             <constraint firstItem="1yY-ik-9QI" firstAttribute="bottom" secondItem="TJg-Sm-8Ub" secondAttribute="bottom" constant="65" id="k7T-Je-1BW"/>
                             <constraint firstItem="1yY-ik-9QI" firstAttribute="trailing" secondItem="WdU-V1-WVf" secondAttribute="trailing" constant="16" id="spH-7F-vZB"/>
-                            <constraint firstItem="8Pv-rN-yBD" firstAttribute="leading" secondItem="1yY-ik-9QI" secondAttribute="leading" constant="52" id="xR3-Br-ri8"/>
+                            <constraint firstItem="dik-PH-BiI" firstAttribute="leading" secondItem="1yY-ik-9QI" secondAttribute="leading" id="umS-7q-Gev"/>
+                            <constraint firstItem="dik-PH-BiI" firstAttribute="top" secondItem="vXO-zp-zi2" secondAttribute="bottom" constant="8" id="zcd-lj-r9v"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1yY-ik-9QI"/>
                     </view>
                     <connections>
                         <outlet property="currentReps" destination="sFH-B4-MDo" id="Ecd-Ck-eOk"/>
+                        <outlet property="progressImg" destination="dik-PH-BiI" id="uVD-Xf-7eJ"/>
                         <outlet property="repLimit" destination="qtG-cB-0Q5" id="c8E-XV-Oe4"/>
                         <outlet property="setLimit" destination="TJg-Sm-8Ub" id="3ab-ve-cCH"/>
                         <segue destination="ojE-Gg-k1N" kind="show" identifier="RestPage" id="9OW-YE-Z0F"/>
+                        <segue destination="8zf-tA-Mhn" kind="show" identifier="finishExercise" id="bLi-Ex-am9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="deh-Iy-2ie" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -459,6 +460,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1Ew-1M-ltg"/>
                     </view>
+                    <connections>
+                        <outlet property="scoreText" destination="sbf-ka-ZhC" id="uE8-PC-riq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Agn-U0-SRF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -550,8 +554,7 @@
                                     <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="finishExercise:" destination="ojE-Gg-k1N" eventType="touchUpInside" id="Ogb-hX-5So"/>
-                                    <action selector="finishProt:" destination="QTa-pp-Wcq" eventType="touchUpInside" id="CkD-UR-fq3"/>
+                                    <action selector="finishExercise:" destination="ojE-Gg-k1N" eventType="touchUpInside" id="ibI-j7-uAU"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="REST" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vmg-gT-6Mt">
@@ -638,11 +641,12 @@
                         <viewLayoutGuide key="safeArea" id="eEb-5r-41N"/>
                     </view>
                     <connections>
-                        <outlet property="finishButton" destination="HGQ-yj-yt7" id="35m-2M-Unq"/>
                         <outlet property="repsLabel" destination="p3u-be-pzh" id="baR-Kc-Dyz"/>
                         <outlet property="returnToExcerciseButton" destination="Xob-bP-00o" id="Txa-9S-V0B"/>
                         <outlet property="setsLabel" destination="EON-MT-pxR" id="9SY-Mo-Vr6"/>
                         <outlet property="timeLeft" destination="hvx-IU-KwB" id="soy-Ft-07f"/>
+                        <segue destination="QTa-pp-Wcq" kind="show" identifier="continueExercise" id="NiZ-e8-Ush"/>
+                        <segue destination="8zf-tA-Mhn" kind="show" identifier="finishExercise" id="F03-yI-YN0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="boO-ob-0l4" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -675,11 +679,13 @@
         <image name="finish" width="242" height="88"/>
         <image name="minus" width="140" height="146"/>
         <image name="plus" width="152" height="154"/>
-        <image name="progress" width="308" height="356"/>
         <image name="startButton" width="678" height="134"/>
         <image name="startOver" width="322" height="126"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="9OW-YE-Z0F"/>
+        <segue reference="bLi-Ex-am9"/>
+        <segue reference="NiZ-e8-Ush"/>
         <segue reference="2ai-WE-1TK"/>
     </inferredMetricsTieBreakers>
 </document>

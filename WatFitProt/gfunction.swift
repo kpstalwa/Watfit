@@ -18,6 +18,7 @@ class gfunction{
     var exercise = Exercise()
     var motionStatus = 0
     var syncGroup: DispatchGroup?
+    @IBOutlet weak var progressImg: UIImageView!
 
     @IBOutlet weak var currentReps: UILabel!
 
@@ -52,6 +53,12 @@ class gfunction{
         //print("interval time is ", time)
     }
     
+    func setGoodImage(){
+        progressImg.loadGif(name: "source")
+    }
+    func setBadImage(){
+        progressImg.loadGif(name: "bad")
+    }
     func startRecord(){
         syncGroup?.enter()
         print("exercise in gfunction: ", exercise.name ?? "Y")
@@ -147,6 +154,7 @@ class gfunction{
         
         if g > goodActionUpper {
             print ("bad rising pace :", g)
+            setBadImage()
             badQuality = badQuality + 1
             return 1
         }
@@ -169,6 +177,7 @@ class gfunction{
         
         if g < goodResetLower {
             print ("bad falling pace :", g)
+            setBadImage()
             badQuality = badQuality + 1
             return -1
         }
@@ -230,6 +239,7 @@ class gfunction{
             exercise.incrementOverallReps()
             if badQuality == 0{
                 goodQuality = goodQuality + 1
+                setGoodImage()
                 exercise.incrementGoodReps()
             }
             print("Quantity: ", quantity, " Good Quality: ", goodQuality, " ************************************")
@@ -242,6 +252,7 @@ class gfunction{
             currentReps.text = String(exercise.reps! - quantity)
             if badQuality == 0{
                 goodQuality = goodQuality + 1
+                setGoodImage()
                 exercise.incrementGoodReps()
             }
             clearBufferY()

@@ -17,7 +17,6 @@ class TimerViewController: UIViewController {
     @IBOutlet weak var setsLabel: UILabel!
     @IBOutlet weak var repsLabel: UILabel!
     
-    @IBOutlet weak var finishButton: UIButton!
     @IBOutlet weak var returnToExcerciseButton: UIButton!
     
     @IBOutlet weak var timeLeft: UILabel!
@@ -56,8 +55,8 @@ class TimerViewController: UIViewController {
     }
     //call when timer expires or button pressed
     func setExerciseProperties(){
-        let setVal:Int? = Int(repsLabel.text!)
-        let repVal:Int? = Int(setsLabel.text!)
+        let setVal:Int? = Int(setsLabel.text!)
+        let repVal:Int? = Int(repsLabel.text!)
         currentExc?.sets = setVal
         currentExc?.reps = repVal
     }
@@ -65,7 +64,10 @@ class TimerViewController: UIViewController {
     @IBAction func continueExercise(_ sender: Any) {
        setExerciseProperties()
         //should perform segue
+        performSegue(withIdentifier: "continueExercise", sender: currentExc)
     }
+    
+    
     
     
     override func viewDidLoad() {
@@ -85,19 +87,32 @@ class TimerViewController: UIViewController {
         timeLeft.text = "\(totalTime)"
         }
         else{
-            setExerciseProperties()
             timer.invalidate()
+            setExerciseProperties()
             //perform segue
+            performSegue(withIdentifier: "continueExercise", sender: currentExc)
         }
     }
-
     func runTimer(){
         timer = Timer.scheduledTimer(timeInterval: 1, target: self,   selector: (#selector(updateTimer)), userInfo: nil, repeats: true)
     }
     
-    @IBAction func finishExercise(_ sender: Any) {
-        //segue out to the score
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "continueExercise"{
+            let motionVC = segue.destination as! MotionViewController
+            motionVC.currentExc = currentExc
+        }
+        else if (segue.identifier == "finishExercise"){
+            let scoreVC = segue.destination as! ScoreViewController
+            scoreVC.currentExc = currentExc
+        }
     }
+    
+    @IBAction func finishExercise(_ sender: Any) {
+        performSegue(withIdentifier: "finishExercise", sender: currentExc)
+    }
+    
     
     
     override func viewWillAppear(_ animated: Bool) {

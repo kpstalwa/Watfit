@@ -11,6 +11,7 @@ import UIKit
 class ScoreViewController: UIViewController {
     var currentExc : Exercise?
 
+    @IBOutlet weak var scoreText: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Score"
@@ -23,7 +24,11 @@ class ScoreViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        scoreText.text = currentExc?.getScoreStatement()
+    }
+    
     /*
     // MARK: - Navigation
 
