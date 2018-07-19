@@ -9,3 +9,5 @@ WatFit is a fitness app that uses motion sensing capabilities of the IPhone to b
 - Appropriate visual and (soon) audio cues for the technique you use.
 - Rest period, and allows for changing reps and sets mid rest.
 - Scoring mechanism for final feedback
+
+[Early Demo Run](https://www.youtube.com/watch?v=9hwA24xNQ9Q)
