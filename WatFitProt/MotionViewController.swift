@@ -22,9 +22,7 @@ class MotionViewController: UIViewController {
     @IBOutlet weak var repLimit: UILabel!
     @IBOutlet weak var currentReps: UILabel!
     //incase finish button is called
-    @IBAction func finishProt(_ sender: UIButton) {
-        performSegue(withIdentifier: "RestPage", sender: currentExc)
-    }
+
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "RestPage" {
@@ -46,8 +44,12 @@ class MotionViewController: UIViewController {
     
     @IBAction func finishExercise(_ sender: Any) {
         m.motion.stopDeviceMotionUpdates()
-        
+        if(setLimit.text == "1"){
         performSegue(withIdentifier: "finishExercise", sender: currentExc)
+    }
+        else {
+            performSegue(withIdentifier: "RestPage", sender: currentExc)
+        }
     }
     
     

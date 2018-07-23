@@ -354,7 +354,7 @@
                                     <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="finishProt:" destination="QTa-pp-Wcq" eventType="touchUpInside" id="Bfo-9u-MKf"/>
+                                    <action selector="finishExercise:" destination="QTa-pp-Wcq" eventType="touchUpInside" id="X8s-gL-1eS"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TJg-Sm-8Ub">
