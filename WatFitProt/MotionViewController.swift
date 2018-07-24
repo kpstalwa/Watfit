@@ -16,6 +16,7 @@ class MotionViewController: UIViewController {
     let m = gfunction()
     
    
+    @IBOutlet weak var startTicker: UILabel!
     @IBOutlet weak var progressImg: UIImageView!
     
     @IBOutlet weak var setLimit: UILabel!
@@ -56,16 +57,21 @@ class MotionViewController: UIViewController {
     @objc func updateTimer() {
         if(timeTillStart > 0){
         timeTillStart = timeTillStart-1
+        startTicker.text = "\(timeTillStart)"
         }
         else{
+            startTicker.text = "Recording"
             m.startRecord()
+            
             timer.invalidate()
             syncGroup.notify(queue: .main){
+                print("set finished, back in motion view")
+                self.m.motion.stopDeviceMotionUpdates()
                 if(self.setLimit.text == "1"){
                     self.performSegue(withIdentifier: "finishExercise", sender: self.currentExc)
                 }
                 else{
-                self.performSegue(withIdentifier: "RestPage", sender: self.currentExc)
+                    self.performSegue(withIdentifier: "RestPage", sender: self.currentExc)
             }
         }
     }
@@ -85,6 +91,7 @@ class MotionViewController: UIViewController {
         m.syncGroup = syncGroup
         m.progressImg = progressImg
         
+        startTicker.text = "\(timeTillStart)"
         //3 second wait until recording
         timer = Timer.scheduledTimer(timeInterval: 1, target: self,   selector: (#selector(updateTimer)), userInfo: nil, repeats: true)
     

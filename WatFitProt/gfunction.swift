@@ -11,7 +11,7 @@ import CoreMotion
 import UIKit
 
 class gfunction{
-    
+    var isbad = 0
     var quantity = 0
     var goodQuality = 0
     var badQuality = 0
@@ -19,7 +19,6 @@ class gfunction{
     var motionStatus = 0
     var syncGroup: DispatchGroup?
     @IBOutlet weak var progressImg: UIImageView!
-
     @IBOutlet weak var currentReps: UILabel!
 
     var motion = CMMotionManager()
@@ -86,6 +85,10 @@ class gfunction{
         //print( " Roll: ",roll, " Pitch: ", pitch, " Yaw: ", yaw)
         
         if pitch < formConstrainPitch {
+            if isbad != 0 {
+                setBadImage()
+                isbad = 1
+            }
             print("bad form")
         }
         
@@ -140,10 +143,11 @@ class gfunction{
         //print("x: ", x, " y:", y, " z:", z)
         
         if quantity <= 0 {
-            motion.stopDeviceMotionUpdates()
+            setUpdateInterval(time: 1)
+            print("gyro stopped")
             syncGroup?.leave()
             //
-            return
+           // return
         }
         
         
@@ -154,7 +158,10 @@ class gfunction{
         
         if g > goodActionUpper {
             print ("bad rising pace :", g)
-            setBadImage()
+            if isbad != 0 {
+                setBadImage()
+                isbad = 1
+            }
             badQuality = badQuality + 1
             return 1
         }
@@ -177,7 +184,10 @@ class gfunction{
         
         if g < goodResetLower {
             print ("bad falling pace :", g)
-            setBadImage()
+            if isbad != 0 {
+                setBadImage()
+                isbad = 1
+            }
             badQuality = badQuality + 1
             return -1
         }
@@ -240,11 +250,13 @@ class gfunction{
             if badQuality == 0{
                 goodQuality = goodQuality + 1
                 setGoodImage()
+                isbad = 0
                 exercise.incrementGoodReps()
             }
-            print("Quantity: ", quantity, " Good Quality: ", goodQuality, " ************************************")
+            print("Quantity: ", quantity, " Good Quality: ", goodQuality, " ************************************!!!!!!!!")
             badQuality = 0
             return
+            
         }  else if motionStatus == 5 && goThroughfiltedBufferY(target: -1) == 1 {
             motionStatus = 1
             exercise.incrementOverallReps()
@@ -253,6 +265,7 @@ class gfunction{
             if badQuality == 0{
                 goodQuality = goodQuality + 1
                 setGoodImage()
+                isbad = 0
                 exercise.incrementGoodReps()
             }
             clearBufferY()

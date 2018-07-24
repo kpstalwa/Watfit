@@ -306,14 +306,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gc2-Do-bPn">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gc2-Do-bPn">
                                 <rect key="frame" x="24" y="536" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Set:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WJE-4S-A4D">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WJE-4S-A4D">
                                 <rect key="frame" x="24" y="472" width="61" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="61" id="JYq-Ve-oP6"/>
@@ -374,27 +373,39 @@
                                     <constraint firstAttribute="width" constant="375" id="plm-hF-iIP"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nuq-hP-mvP">
+                                <rect key="frame" x="134" y="474" width="124" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="WJE-4S-A4D" firstAttribute="leading" secondItem="gc2-Do-bPn" secondAttribute="leading" id="2hj-OR-lPb"/>
                             <constraint firstItem="1yY-ik-9QI" firstAttribute="bottom" secondItem="qtG-cB-0Q5" secondAttribute="bottom" constant="65" id="2tT-gY-PEY"/>
                             <constraint firstItem="WdU-V1-WVf" firstAttribute="top" secondItem="dik-PH-BiI" secondAttribute="bottom" constant="8" id="4WR-5E-H5F"/>
+                            <constraint firstItem="WJE-4S-A4D" firstAttribute="baseline" secondItem="WdU-V1-WVf" secondAttribute="baseline" id="7Ex-NA-6JR"/>
                             <constraint firstItem="dik-PH-BiI" firstAttribute="trailing" secondItem="1yY-ik-9QI" secondAttribute="trailing" id="8hu-Fg-NNo"/>
                             <constraint firstItem="SvY-WR-Nfk" firstAttribute="leading" secondItem="Ut2-Gl-IRh" secondAttribute="trailing" constant="34" id="992-E8-eDn"/>
                             <constraint firstItem="vXO-zp-zi2" firstAttribute="leading" secondItem="1yY-ik-9QI" secondAttribute="leading" constant="24" id="9Uf-DT-MdK"/>
                             <constraint firstItem="1yY-ik-9QI" firstAttribute="bottom" secondItem="Ut2-Gl-IRh" secondAttribute="bottom" constant="20" id="Dck-jc-z6c"/>
                             <constraint firstItem="1yY-ik-9QI" firstAttribute="bottom" secondItem="sFH-B4-MDo" secondAttribute="bottom" constant="58" id="IYu-uE-DVr"/>
                             <constraint firstItem="1yY-ik-9QI" firstAttribute="bottom" secondItem="SvY-WR-Nfk" secondAttribute="bottom" constant="55" id="JUU-Qk-VHR"/>
+                            <constraint firstItem="gc2-Do-bPn" firstAttribute="top" secondItem="WJE-4S-A4D" secondAttribute="bottom" constant="23" id="KH3-mW-QJB"/>
                             <constraint firstItem="vXO-zp-zi2" firstAttribute="top" secondItem="1yY-ik-9QI" secondAttribute="top" constant="18" id="Lhj-SN-qBp"/>
                             <constraint firstItem="Ut2-Gl-IRh" firstAttribute="leading" secondItem="TJg-Sm-8Ub" secondAttribute="trailing" constant="18" id="Lz8-tB-JGX"/>
                             <constraint firstItem="1yY-ik-9QI" firstAttribute="trailing" secondItem="SvY-WR-Nfk" secondAttribute="trailing" constant="41" id="P0z-Qi-7nG"/>
                             <constraint firstItem="qtG-cB-0Q5" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="sFH-B4-MDo" secondAttribute="trailing" constant="8" symbolic="YES" id="QyL-Z9-hPa"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="TJg-Sm-8Ub" secondAttribute="trailing" constant="20" symbolic="YES" id="R65-0n-sUC"/>
                             <constraint firstItem="sFH-B4-MDo" firstAttribute="leading" secondItem="j8A-eS-a4u" secondAttribute="leading" constant="255" id="RsZ-3L-5Jc"/>
+                            <constraint firstItem="nuq-hP-mvP" firstAttribute="top" secondItem="dik-PH-BiI" secondAttribute="bottom" constant="10" id="S1s-sj-wda"/>
                             <constraint firstItem="WJE-4S-A4D" firstAttribute="leading" secondItem="1yY-ik-9QI" secondAttribute="leading" constant="24" id="WXA-mt-5j7"/>
+                            <constraint firstItem="nuq-hP-mvP" firstAttribute="leading" secondItem="WJE-4S-A4D" secondAttribute="trailing" constant="67" id="c1F-Aa-QUP"/>
                             <constraint firstItem="1yY-ik-9QI" firstAttribute="trailing" secondItem="vXO-zp-zi2" secondAttribute="trailing" constant="16" id="ihp-hX-Aj2"/>
                             <constraint firstItem="1yY-ik-9QI" firstAttribute="trailing" secondItem="qtG-cB-0Q5" secondAttribute="trailing" constant="3" id="inv-rl-NAn"/>
                             <constraint firstItem="1yY-ik-9QI" firstAttribute="bottom" secondItem="TJg-Sm-8Ub" secondAttribute="bottom" constant="65" id="k7T-Je-1BW"/>
+                            <constraint firstItem="WdU-V1-WVf" firstAttribute="leading" secondItem="nuq-hP-mvP" secondAttribute="trailing" constant="75" id="mJy-I9-6Jg"/>
                             <constraint firstItem="1yY-ik-9QI" firstAttribute="trailing" secondItem="WdU-V1-WVf" secondAttribute="trailing" constant="16" id="spH-7F-vZB"/>
                             <constraint firstItem="dik-PH-BiI" firstAttribute="leading" secondItem="1yY-ik-9QI" secondAttribute="leading" id="umS-7q-Gev"/>
                             <constraint firstItem="dik-PH-BiI" firstAttribute="top" secondItem="vXO-zp-zi2" secondAttribute="bottom" constant="8" id="zcd-lj-r9v"/>
@@ -406,6 +417,7 @@
                         <outlet property="progressImg" destination="dik-PH-BiI" id="uVD-Xf-7eJ"/>
                         <outlet property="repLimit" destination="qtG-cB-0Q5" id="c8E-XV-Oe4"/>
                         <outlet property="setLimit" destination="TJg-Sm-8Ub" id="3ab-ve-cCH"/>
+                        <outlet property="startTicker" destination="nuq-hP-mvP" id="nuV-mL-m20"/>
                         <segue destination="ojE-Gg-k1N" kind="show" identifier="RestPage" id="9OW-YE-Z0F"/>
                         <segue destination="8zf-tA-Mhn" kind="show" identifier="finishExercise" id="bLi-Ex-am9"/>
                     </connections>
