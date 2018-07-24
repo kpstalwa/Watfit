@@ -11,6 +11,9 @@
 		D37B7C6721001D1900BA4892 /* Swift+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37B7C6621001D1900BA4892 /* Swift+Gif.swift */; };
 		D37B7C6921001E2300BA4892 /* source.gif in Resources */ = {isa = PBXBuildFile; fileRef = D37B7C6821001E2300BA4892 /* source.gif */; };
 		D37B7C6B21001E3000BA4892 /* bad.gif in Resources */ = {isa = PBXBuildFile; fileRef = D37B7C6A21001E3000BA4892 /* bad.gif */; };
+		D37B7C6E2107C09900BA4892 /* resume.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D37B7C6D2107C09800BA4892 /* resume.mp3 */; };
+		D37B7C702107C0A200BA4892 /* goodrep.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D37B7C6F2107C0A200BA4892 /* goodrep.mp3 */; };
+		D37B7C722107C0A800BA4892 /* badrep.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D37B7C712107C0A800BA4892 /* badrep.mp3 */; };
 		D38AF68B20FE7A7100C62810 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38AF68A20FE7A7100C62810 /* TimerViewController.swift */; };
 		D38AF68D20FE9F5500C62810 /* gfunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38AF68C20FE9F5500C62810 /* gfunction.swift */; };
 		D3B568AF20CF1F4D0016C879 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B568AE20CF1F4D0016C879 /* AppDelegate.swift */; };
@@ -50,6 +53,9 @@
 		D37B7C6621001D1900BA4892 /* Swift+Gif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Swift+Gif.swift"; sourceTree = "<group>"; };
 		D37B7C6821001E2300BA4892 /* source.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = source.gif; sourceTree = "<group>"; };
 		D37B7C6A21001E3000BA4892 /* bad.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = bad.gif; sourceTree = "<group>"; };
+		D37B7C6D2107C09800BA4892 /* resume.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = resume.mp3; sourceTree = "<group>"; };
+		D37B7C6F2107C0A200BA4892 /* goodrep.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = goodrep.mp3; sourceTree = "<group>"; };
+		D37B7C712107C0A800BA4892 /* badrep.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = badrep.mp3; sourceTree = "<group>"; };
 		D38AF68A20FE7A7100C62810 /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 		D38AF68C20FE9F5500C62810 /* gfunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gfunction.swift; sourceTree = "<group>"; };
 		D3B568AB20CF1F4D0016C879 /* WatFitProt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatFitProt.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -97,6 +103,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D37B7C6C2107C07300BA4892 /* Music */ = {
+			isa = PBXGroup;
+			children = (
+				D37B7C712107C0A800BA4892 /* badrep.mp3 */,
+				D37B7C6F2107C0A200BA4892 /* goodrep.mp3 */,
+				D37B7C6D2107C09800BA4892 /* resume.mp3 */,
+			);
+			path = Music;
+			sourceTree = "<group>";
+		};
 		D3B568A220CF1F4D0016C879 = {
 			isa = PBXGroup;
 			children = (
@@ -134,6 +150,7 @@
 				D3B568DF20CF31BF0016C879 /* CustomCollectionViewCell.swift */,
 				D3B568E320CF634D0016C879 /* Exercise.swift */,
 				D38AF68C20FE9F5500C62810 /* gfunction.swift */,
+				D37B7C6C2107C07300BA4892 /* Music */,
 				D3B568B820CF1F4D0016C879 /* Assets.xcassets */,
 				D3B568BA20CF1F4D0016C879 /* LaunchScreen.storyboard */,
 				D3B568BD20CF1F4D0016C879 /* Info.plist */,
@@ -273,9 +290,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3B568BC20CF1F4D0016C879 /* LaunchScreen.storyboard in Resources */,
+				D37B7C702107C0A200BA4892 /* goodrep.mp3 in Resources */,
 				D3B568B920CF1F4D0016C879 /* Assets.xcassets in Resources */,
 				D37B7C6B21001E3000BA4892 /* bad.gif in Resources */,
+				D37B7C6E2107C09900BA4892 /* resume.mp3 in Resources */,
 				D3B568B420CF1F4D0016C879 /* Main.storyboard in Resources */,
+				D37B7C722107C0A800BA4892 /* badrep.mp3 in Resources */,
 				D37B7C6921001E2300BA4892 /* source.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
