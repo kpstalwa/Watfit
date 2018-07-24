@@ -49,9 +49,15 @@ class Exercise {
         //only good reps recorded
         goodRepsOverall = goodRepsOverall! + 1
     }
+    
+    func getFinalScore() -> Double{
+    return (Double(goodRepsOverall!)/Double(completedRepsOverall!)) * 100
+    }
+    
     func getScoreStatement()->String{
         if(completedRepsOverall != 0){
-        return "You completed a total of \(completedRepsOverall!) reps, out of which you performed \(goodRepsOverall!) perfectly. Your Final score is \((goodRepsOverall!/completedRepsOverall!) * 100), out of 100"
+            let score = getFinalScore()
+            return "You completed a total of \(completedRepsOverall!) reps, out of which you performed \(goodRepsOverall!) perfectly. Your Final score is \(Int(score)), out of 100"
     }
         else{
             return "You did not finish the exercise"
