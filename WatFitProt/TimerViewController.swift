@@ -7,13 +7,13 @@
 //
 
 import UIKit
+import AVFoundation
 
 class TimerViewController: UIViewController {
-
     var currentExc : Exercise?
     var totalTime = 60
     var timer = Timer()
-    
+    var delayAudioPlayer = AVAudioPlayer()
     @IBOutlet weak var setsLabel: UILabel!
     @IBOutlet weak var repsLabel: UILabel!
     
@@ -87,6 +87,13 @@ class TimerViewController: UIViewController {
         timeLeft.text = "\(totalTime)"
         }
         else{
+            if(delayAudioPlayer.isPlaying){
+                delayAudioPlayer.currentTime = 0
+                delayAudioPlayer.play()
+            }
+            else{
+                delayAudioPlayer.play() //start playing the sound
+            }
             timer.invalidate()
             setExerciseProperties()
             //perform segue

@@ -13,5 +13,5 @@ class CustomCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var cellImage: UIImageView!
     
     @IBOutlet weak var cellLabel: UILabel!
-    
+
 }

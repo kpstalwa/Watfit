@@ -695,9 +695,8 @@
         <image name="startOver" width="322" height="126"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="9OW-YE-Z0F"/>
         <segue reference="bLi-Ex-am9"/>
-        <segue reference="NiZ-e8-Ush"/>
+        <segue reference="th0-SC-y3D"/>
         <segue reference="2ai-WE-1TK"/>
     </inferredMetricsTieBreakers>
 </document>

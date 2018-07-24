@@ -18,6 +18,8 @@ class MotionViewController: UIViewController {
     
     //audio player variables
     var delayAudioPlayer = AVAudioPlayer() //for 3 second delay
+    var badRepPlayer = AVAudioPlayer() //sound for doing a bad rep
+    var goodRepPlayer = AVAudioPlayer() // sound for doing a good rep
     
    
     @IBOutlet weak var startTicker: UILabel!
@@ -32,6 +34,7 @@ class MotionViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "RestPage" {
             let timerVC = segue.destination as! TimerViewController
+            timerVC.delayAudioPlayer = delayAudioPlayer
             timerVC.currentExc = currentExc
         }
         else if segue.identifier == "finishExercise" {
