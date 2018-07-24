@@ -8,12 +8,16 @@
 
 import UIKit
 import SystemConfiguration
+import AVFoundation
 class MotionViewController: UIViewController {
     var syncGroup = DispatchGroup()
     var timeTillStart = 3
     var timer = Timer()
     var currentExc : Exercise?
     let m = gfunction()
+    
+    //audio player variables
+    var delayAudioPlayer = AVAudioPlayer() //for 3 second delay
     
    
     @IBOutlet weak var startTicker: UILabel!
@@ -60,9 +64,15 @@ class MotionViewController: UIViewController {
         startTicker.text = "\(timeTillStart)"
         }
         else{
-            startTicker.text = "Recording"
+            startTicker.text = "Go!"
+            if(delayAudioPlayer.isPlaying){
+                delayAudioPlayer.currentTime = 0
+                delayAudioPlayer.play()
+            }
+            else{
+                delayAudioPlayer.play() //start playing the sound
+            }
             m.startRecord()
-            
             timer.invalidate()
             syncGroup.notify(queue: .main){
                 print("set finished, back in motion view")
@@ -91,11 +101,23 @@ class MotionViewController: UIViewController {
         m.syncGroup = syncGroup
         m.progressImg = progressImg
         
+        //initialize AudioPlayer
+        
+        do{
+            delayAudioPlayer = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath: Bundle.main.path(forResource: "resume", ofType: "mp3")!))
+        }
+        catch{
+            print(error)
+        }
+        
+        delayAudioPlayer.prepareToPlay()
+        
+        
         startTicker.text = "\(timeTillStart)"
         //3 second wait until recording
         timer = Timer.scheduledTimer(timeInterval: 1, target: self,   selector: (#selector(updateTimer)), userInfo: nil, repeats: true)
     
-
+        
     
     }
     
