@@ -11,6 +11,7 @@ import UIKit
 class ScoreViewController: UIViewController {
     var currentExc : Exercise?
 
+    @IBOutlet weak var circle: UIImageView!
     @IBOutlet weak var scoreText: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +27,13 @@ class ScoreViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        if((Int)((currentExc?.getFinalScore())!)>=50){
+            circle.image = UIImage(named: "circleGreen")
+            
+        }
+        else{
+            circle.image = UIImage(named: "circleRed")
+        }
         scoreText.text = currentExc?.getScoreStatement()
     }
     

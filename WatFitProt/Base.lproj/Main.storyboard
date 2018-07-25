@@ -473,6 +473,7 @@
                         <viewLayoutGuide key="safeArea" id="1Ew-1M-ltg"/>
                     </view>
                     <connections>
+                        <outlet property="circle" destination="Kur-o1-PTO" id="rDF-z9-QjG"/>
                         <outlet property="scoreText" destination="sbf-ka-ZhC" id="uE8-PC-riq"/>
                     </connections>
                 </viewController>

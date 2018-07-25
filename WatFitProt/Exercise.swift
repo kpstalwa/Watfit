@@ -51,6 +51,9 @@ class Exercise {
     }
     
     func getFinalScore() -> Double{
+        if(completedRepsOverall == 0){
+            return Double(0)
+        }
     return (Double(goodRepsOverall!)/Double(completedRepsOverall!)) * 100
     }
     
