@@ -19,3 +19,5 @@ This app seeks to give you real time output while you are performing the exercis
 - Scoring mechanism for final feedback
 
 [Early Demo Run](https://www.youtube.com/watch?v=9hwA24xNQ9Q)
+
+- Peer Coded by Team GTN for CS 446
