@@ -27,6 +27,7 @@ class ScoreViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: true)
         if((Int)((currentExc?.getFinalScore())!)>=50){
             circle.image = UIImage(named: "circleGreen")
             

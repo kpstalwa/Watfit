@@ -114,6 +114,7 @@ class DescriptionViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         
         super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: true)
         setClass(numOfEx: index)
         self.title = currentExc.name
         ExerciseImg.image = UIImage(named: currentExc.name!)

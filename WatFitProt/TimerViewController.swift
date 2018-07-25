@@ -126,6 +126,7 @@ class TimerViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
      super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: true)
         setsLabel.text = String(describing: (currentExc?.sets)!-1)
     repsLabel.text = String(describing: (currentExc?.reps)!)
     timeLeft.text = "\(totalTime)"

@@ -141,9 +141,9 @@ class gfunction{
         //print( " Roll: ",roll, " Pitch: ", pitch, " Yaw: ", yaw)
         
         if pitch < formConstrainPitch {
-            if isbad != 0 {
+            if isbad == 0 {
                 setBadImage()
-                isbad = 1
+                playBadSound()
             }
             print("bad form")
         }

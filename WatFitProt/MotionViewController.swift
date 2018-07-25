@@ -152,6 +152,7 @@ class MotionViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: true)
         self.title = "Perform Exercise"
         setLimit!.text! = String(describing: currentExc!.sets!)
         repLimit!.text! = String(describing: currentExc!.reps!)
