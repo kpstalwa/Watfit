@@ -64,6 +64,7 @@ class TimerViewController: UIViewController {
     @IBAction func continueExercise(_ sender: Any) {
        setExerciseProperties()
         //should perform segue
+        timer.invalidate()
         performSegue(withIdentifier: "continueExercise", sender: currentExc)
     }
     
@@ -117,6 +118,7 @@ class TimerViewController: UIViewController {
     }
     
     @IBAction func finishExercise(_ sender: Any) {
+        timer.invalidate()
         performSegue(withIdentifier: "finishExercise", sender: currentExc)
     }
     

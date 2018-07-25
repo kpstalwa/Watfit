@@ -52,6 +52,7 @@ class MotionViewController: UIViewController {
     
     @IBAction func finishExercise(_ sender: Any) {
         m.motion.stopDeviceMotionUpdates()
+        timer.invalidate()
         if(setLimit.text == "1"){
         performSegue(withIdentifier: "finishExercise", sender: currentExc)
     }
@@ -79,11 +80,18 @@ class MotionViewController: UIViewController {
             timer.invalidate()
             syncGroup.notify(queue: .main){
                 print("set finished, back in motion view")
-                self.m.motion.stopDeviceMotionUpdates()
+                self.m.timer.invalidate()
+                if self.m.lastRepGood == 0{
+                    self.badRepPlayer.play()
+                }else{
+                    self.goodRepPlayer.play()
+                }
                 if(self.setLimit.text == "1"){
+                    print("get here! segue to finish")
                     self.performSegue(withIdentifier: "finishExercise", sender: self.currentExc)
                 }
                 else{
+                    print("get here! segue to rest")
                     self.performSegue(withIdentifier: "RestPage", sender: self.currentExc)
             }
         }
@@ -103,6 +111,7 @@ class MotionViewController: UIViewController {
         m.currentReps = currentReps
         m.syncGroup = syncGroup
         m.progressImg = progressImg
+        m.startTicker = startTicker
         
         //initialize AudioPlayer
         
@@ -112,16 +121,33 @@ class MotionViewController: UIViewController {
         catch{
             print(error)
         }
+         //*************************************************
+        do{
+            badRepPlayer = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath: Bundle.main.path(forResource: "badrep", ofType: "mp3")!))
+        }
+        catch{
+            print(error)
+        }
         
+        do{
+            goodRepPlayer = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath: Bundle.main.path(forResource: "goodrep", ofType: "mp3")!))
+        }
+        catch{
+            print(error)
+        }
+  //*************************************************
+    
         delayAudioPlayer.prepareToPlay()
+         //*************************************************
+        badRepPlayer.prepareToPlay()
+        goodRepPlayer.prepareToPlay()
         
-        
+        m.goodRepPlayer = goodRepPlayer //set values for gfunction audio
+        m.badRepPlayer = badRepPlayer
+     //*************************************************
         startTicker.text = "\(timeTillStart)"
         //3 second wait until recording
         timer = Timer.scheduledTimer(timeInterval: 1, target: self,   selector: (#selector(updateTimer)), userInfo: nil, repeats: true)
-    
-        
-    
     }
     
     override func viewWillAppear(_ animated: Bool) {

@@ -8,9 +8,11 @@
 
 import Foundation
 import CoreMotion
+import AVFoundation
 import UIKit
 
 class gfunction{
+    var lastRepGood = 0 //bad
     var isbad = 0
     var quantity = 0
     var goodQuality = 0
@@ -18,8 +20,11 @@ class gfunction{
     var exercise = Exercise()
     var motionStatus = 0
     var syncGroup: DispatchGroup?
+   // var syncGroup2: DispatchGroup?
+    var timer = Timer()
     @IBOutlet weak var progressImg: UIImageView!
     @IBOutlet weak var currentReps: UILabel!
+    @IBOutlet weak var startTicker: UILabel!
 
     var motion = CMMotionManager()
     var x_buffer = [Double]()
@@ -46,6 +51,9 @@ class gfunction{
     var formConstrainPitch = Double()
     var formConstrainYaw = Double()
     
+    //audio players
+    var goodRepPlayer = AVAudioPlayer()
+    var badRepPlayer = AVAudioPlayer()
     
     func setUpdateInterval(time:Double){
         motion.deviceMotionUpdateInterval = time
@@ -54,9 +62,11 @@ class gfunction{
     
     func setGoodImage(){
         progressImg.loadGif(name: "source")
+        isbad = 0
     }
     func setBadImage(){
         progressImg.loadGif(name: "bad")
+        isbad = 1
     }
     func startRecord(){
         syncGroup?.enter()
@@ -76,6 +86,52 @@ class gfunction{
     func degrees(radians:Double) -> Double {
         return 180 / M_PI * radians
     }
+    
+    @objc func updateTimer(){
+        timer.invalidate()
+        self.motion.stopDeviceMotionUpdates()
+
+        self.startTicker.text = "Finished"
+        
+          self.syncGroup?.leave()
+    }
+    
+    func playBadSound(){
+       // syncGroup2?.enter()
+        if quantity > 1 {
+            if(badRepPlayer.isPlaying){
+                badRepPlayer.currentTime = 0
+                // badRepPlayer.play()
+            }
+            else{
+                badRepPlayer.play()
+            }
+            
+        }else{
+            lastRepGood = 0
+        }
+        //syncGroup2?.leave()
+        return
+    }
+    
+    func playGoodSound(){
+        // syncGroup2?.enter()
+        if quantity > 1 {
+            if(goodRepPlayer.isPlaying){
+                goodRepPlayer.currentTime = 0
+                // badRepPlayer.play()
+            }
+            else{
+                goodRepPlayer.play()
+            }
+            
+        }else{
+            lastRepGood = 1
+        }
+        //syncGroup2?.leave()
+        return
+    }
+    
     
     func handleDeviceMotionUpdate(deviceMotion:CMDeviceMotion) {
         var attitude = deviceMotion.attitude
@@ -143,10 +199,24 @@ class gfunction{
         //print("x: ", x, " y:", y, " z:", z)
         
         if quantity <= 0 {
-            setUpdateInterval(time: 1)
-            print("gyro stopped")
-            syncGroup?.leave()
+            //self.timer = Timer.scheduledTimer(timeInterval: 2, target: self,   selector: (#selector(self.updateTimer)), userInfo: nil, repeats: true)
+            
+            
+            timer.invalidate()
+            self.motion.stopDeviceMotionUpdates()
+            
+            self.startTicker.text = "Finished"
+            
+            self.syncGroup?.leave()
+           // syncGroup2?.notify(queue: .main){
+               // self.setUpdateInterval(time: 1)
+            
+              //  self.timer = Timer.scheduledTimer(timeInterval: 3, target: self,   selector: (#selector(self.updateTimer)), userInfo: nil, repeats: true)
+                print("gyro stopped")
+            
             //
+           // }
+            
            // return
         }
         
@@ -158,9 +228,8 @@ class gfunction{
         
         if g > goodActionUpper {
             print ("bad rising pace :", g)
-            if isbad != 0 {
+            if isbad == 0 {
                 setBadImage()
-                isbad = 1
             }
             badQuality = badQuality + 1
             return 1
@@ -184,9 +253,8 @@ class gfunction{
         
         if g < goodResetLower {
             print ("bad falling pace :", g)
-            if isbad != 0 {
+            if isbad == 0 {
                 setBadImage()
-                isbad = 1
             }
             badQuality = badQuality + 1
             return -1
@@ -242,35 +310,68 @@ class gfunction{
         
         if motionStatus == 5 && goThroughfiltedBufferY(target: 0) == 1 {
             motionStatus = 0
-            quantity = quantity - 1
-            currentReps.text = String(exercise.reps! - quantity)
             print("rep finished. ************************************")
             clearBufferY()
             exercise.incrementOverallReps()
             if badQuality == 0{
                 goodQuality = goodQuality + 1
                 setGoodImage()
-                isbad = 0
+                //play goodrepsound
+   //*************************************************
+                playGoodSound()
+                
+    //*************************************************
                 exercise.incrementGoodReps()
+                
             }
+     //*************************************************
+            else{
+                //play badrepsound
+            
+//                if(badRepPlayer.isPlaying){
+//                    badRepPlayer.currentTime = 0
+//                   // badRepPlayer.play()
+//                }
+//                else{
+//                    badRepPlayer.play()
+//                }
+                
+                playBadSound()
+
+            }
+            quantity = quantity - 1
+            currentReps.text = String(exercise.reps! - quantity)
+     //*************************************************
             print("Quantity: ", quantity, " Good Quality: ", goodQuality, " ************************************!!!!!!!!")
             badQuality = 0
+            
             return
             
         }  else if motionStatus == 5 && goThroughfiltedBufferY(target: -1) == 1 {
             motionStatus = 1
             exercise.incrementOverallReps()
-            quantity = quantity - 1
-            currentReps.text = String(exercise.reps! - quantity)
+            
             if badQuality == 0{
                 goodQuality = goodQuality + 1
                 setGoodImage()
-                isbad = 0
+                
+         //*************************************************
+                playGoodSound()
+         //*************************************************
                 exercise.incrementGoodReps()
             }
+         //*************************************************
+            else{
+                //play badrepsound
+                playBadSound()
+
+            }
+            
+         //*************************************************
             clearBufferY()
             print("rep finished without rest. ************************************")
-            
+            quantity = quantity - 1
+            currentReps.text = String(exercise.reps! - quantity)
             print("Quantity: ", quantity, " Good Quality: ", goodQuality, " ************************************")
             badQuality = 0
             return
